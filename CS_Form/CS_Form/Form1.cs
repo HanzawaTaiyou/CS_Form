@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -48,6 +49,13 @@ namespace CS_Form
                 
             }
 
+            TestLabel testLabel = new TestLabel("らべるだよ",10,300,100,500);
+            Controls.Add(testLabel);
+            //Label label = new Label();
+            //label.Location = new Point(30, 400);
+            //label.Text = "らべるだよ";
+
+            //Controls.Add(label);
 
         }
     }
