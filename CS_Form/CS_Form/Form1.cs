@@ -23,7 +23,8 @@ namespace CS_Form
             // bはyの値指定
             int a = 0;
             int b = 0;
-            int c = 0;
+            string[] c = new string[10] { "あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ" };
+            int d = 0;
 
             // xを100ずつ＋の方向にずらす
             for (int i = 0; i < 3; i++)
@@ -37,10 +38,10 @@ namespace CS_Form
                     // xが100ではないかつyが300ではない又はxが100の場合
                     if (i != 1 && j < 3 || i == 1)
                     {
-                        TestButton testButton = new TestButton(this,c,a, b, 100, 100);
+                        TestButton testButton = new TestButton(this, c[d],a, b, 100, 100);
                         Controls.Add(testButton);
 
-                        c = c + 1;
+                        d = d + 1;
                     }
                     // yを100ずらす
                     b = b + 100;

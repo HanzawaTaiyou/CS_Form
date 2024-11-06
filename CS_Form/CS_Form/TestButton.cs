@@ -17,14 +17,14 @@ namespace CS_Form
         ///コンストラクタ
         ///クラスを生成したときに呼び出される
         ///</summary>
-        public TestButton(Form1 form1,int id,int x, int y, int width, int height)
+        public TestButton(Form1 form1,string id,int x, int y, int width, int height)
         {
             _form1 = form1;
 
             //ClickイベントにOnClick関数を登録
             Click += OnClick;
             //ボタン内に文字を反映させる
-            Text = id.ToString();
+            Text = id;
 
             Location = new Point(x,y);
 
