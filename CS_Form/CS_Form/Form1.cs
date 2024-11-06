@@ -13,6 +13,8 @@ namespace CS_Form
 {
     public partial class Form1 : Form
     {
+        TestLabel _testLabel;
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +37,7 @@ namespace CS_Form
                     // xが100ではないかつyが300ではない又はxが100の場合
                     if (i != 1 && j < 3 || i == 1)
                     {
-                        TestButton testButton = new TestButton(c,a, b, 100, 100);
+                        TestButton testButton = new TestButton(this,c,a, b, 100, 100);
                         Controls.Add(testButton);
 
                         c = c + 1;
@@ -49,8 +51,8 @@ namespace CS_Form
                 
             }
 
-            TestLabel testLabel = new TestLabel("らべるだよ",10,300,100,500);
-            Controls.Add(testLabel);
+            _testLabel = new TestLabel("らべるだよ",10,300,100,500);
+            Controls.Add(_testLabel);
             //Label label = new Label();
             //label.Location = new Point(30, 400);
             //label.Text = "らべるだよ";
@@ -58,5 +60,15 @@ namespace CS_Form
             //Controls.Add(label);
 
         }
+
+        /// <summary>
+        /// ラベルの文字を更新する
+        /// </summary>
+        /// <param name="str"></param>
+        public void LabelTextUpdate(string str)
+        {
+            _testLabel.TextUpdate(str);
+        }
+
     }
 }
