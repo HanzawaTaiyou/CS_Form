@@ -12,6 +12,7 @@ namespace CS_Form
     class TestButton : Button
     {
         Form1 _form1;
+        TestTextBox _textbox;
 
         ///<summary>
         ///コンストラクタ
@@ -34,6 +35,15 @@ namespace CS_Form
         public void OnClick(object sender, EventArgs s)
         {
             _form1.LabelTextUpdate(Text);
+        }
+
+        /// <summary>
+        /// ラベルの文字更新関数
+        /// </summary>
+        /// <param name="str"></param>
+        public void TextUpdate(string str)
+        {
+            Text = str;
         }
 
     }

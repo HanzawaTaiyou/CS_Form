@@ -15,6 +15,8 @@ namespace CS_Form
     {
         TestLabel _testLabel;
 
+        TestTextBox _textbox;
+
         public Form1()
         {
             InitializeComponent();
@@ -52,13 +54,16 @@ namespace CS_Form
                 
             }
 
-            _testLabel = new TestLabel("らべるだよ",10,300,100,500);
+            _testLabel = new TestLabel("らべるだよ",10,300,100,100);
             Controls.Add(_testLabel);
             //Label label = new Label();
             //label.Location = new Point(30, 400);
             //label.Text = "らべるだよ";
 
             //Controls.Add(label);
+
+            _textbox = new TestTextBox("てきすとぼっくすやで。", 10, 500, 500, 100);
+            Controls.Add(_textbox);
 
         }
 
@@ -68,7 +73,10 @@ namespace CS_Form
         /// <param name="str"></param>
         public void LabelTextUpdate(string str)
         {
-            _testLabel.TextUpdate(str);
+            string Tyukan;
+            Tyukan = str;
+            _testLabel.TextUpdate(Tyukan);
+            _textbox.TextUpdate(Tyukan);
         }
 
     }
