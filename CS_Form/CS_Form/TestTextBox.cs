@@ -10,9 +10,6 @@ namespace CS_Form
 {
     internal class TestTextBox : TextBox
     {
-        TestButton _button;
-        private TestTextBox TextBox;
-        string Hako;
 
         public TestTextBox(string id, int x, int y, int width, int height)
         {
@@ -25,15 +22,11 @@ namespace CS_Form
             Size = new Size(width, height);
         }
 
-        /// <summary>
-        /// ラベルの文字更新関数
-        /// </summary>
-        /// <param name="str"></param>
-        public void TextUpdate(string str)
+        public string TextReplacement(string str)
         {
-            Hako = Text;
-            _button.TextUpdate(Hako);
+            string temp = Text;
             Text = str;
+            return temp;
         }
 
 

@@ -73,10 +73,14 @@ namespace CS_Form
         /// <param name="str"></param>
         public void LabelTextUpdate(string str)
         {
-            string Tyukan;
-            Tyukan = str;
-            _testLabel.TextUpdate(Tyukan);
-            _textbox.TextUpdate(Tyukan);
+            _testLabel.TextUpdate(str);
+        }
+
+        public string ButtonLabelReplacement(string str)
+        {
+            string s = _textbox.TextReplacement(str);
+
+            return s;
         }
 
     }

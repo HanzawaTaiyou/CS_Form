@@ -34,17 +34,14 @@ namespace CS_Form
 
         public void OnClick(object sender, EventArgs s)
         {
+            string t =_form1.ButtonLabelReplacement(Text);
+
+            Text = t;
+
             _form1.LabelTextUpdate(Text);
         }
 
-        /// <summary>
-        /// ラベルの文字更新関数
-        /// </summary>
-        /// <param name="str"></param>
-        public void TextUpdate(string str)
-        {
-            Text = str;
-        }
+        
 
     }
 }
